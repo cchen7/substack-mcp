@@ -1,0 +1,33 @@
+{
+  "name": "mcp-substack",
+  "version": "1.0.0",
+  "description": "Local MCP server for summarizing Substack reader subscriptions.",
+  "main": "dist/server.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "tsx src/server.ts",
+    "start": "node dist/server.js",
+    "spike": "tsx src/spike.ts",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "@mozilla/readability": "^0.6.0",
+    "cheerio": "^1.2.0",
+    "jsdom": "^29.1.1",
+    "playwright": "^1.61.1",
+    "turndown": "^7.2.4",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@types/jsdom": "^28.0.3",
+    "@types/node": "^26.0.1",
+    "@types/turndown": "^5.0.6",
+    "tsx": "^4.22.4",
+    "typescript": "^6.0.3"
+  }
+}

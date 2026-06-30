@@ -1,0 +1,11 @@
+node_modules/
+dist/
+.env
+.env.*
+*.log
+
+# Local private data. The default app data directory is outside the repo, but
+# keep this here in case a developer overrides MCP_SUBSTACK_HOME into the repo.
+.mcp-substack/
+substack.db
+browser-profile/

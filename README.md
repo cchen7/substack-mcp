@@ -83,17 +83,16 @@ Expected result:
 
 ## Priority Publications
 
-This project is currently configured for daily summaries from:
+You can optionally configure a small set of priority publications for daily
+summary runs. This is useful when you subscribe to many publications but only
+want a subset in the default summary.
 
-- Lenny's Newsletter
-- ByteByteGo Newsletter
-
-Set or reset priority publications:
+Set or reset priority publications with your own publication URLs:
 
 ```bash
 npm run spike -- config-priority \
-  https://www.lennysnewsletter.com \
-  https://blog.bytebytego.com
+  https://example-newsletter.substack.com \
+  https://example.com
 ```
 
 Show current config:
@@ -126,8 +125,7 @@ Useful diagnostics:
 
 ```bash
 npm run spike -- discover
-npm run spike -- list-posts https://www.lennysnewsletter.com 5
-npm run spike -- list-posts https://blog.bytebytego.com 5
+npm run spike -- list-posts https://example-newsletter.substack.com 5
 ```
 
 ## MCP Server
@@ -243,8 +241,7 @@ Current verified behavior:
 
 - dedicated browser profile login works
 - subscription discovery works
-- Lenny's Newsletter paid full text works
-- ByteByteGo Newsletter paid full text works
+- paid full text works for authorized subscriptions
 - priority-only sync works
 - SQLite cache stores metadata and markdown
 - chunking works for long articles
@@ -293,8 +290,7 @@ npm run spike -- status
 Then test the publication directly:
 
 ```bash
-npm run spike -- list-posts https://www.lennysnewsletter.com 5
-npm run spike -- list-posts https://blog.bytebytego.com 5
+npm run spike -- list-posts https://example-newsletter.substack.com 5
 ```
 
 ### Reset Local State
@@ -308,4 +304,3 @@ The local data lives outside the repository:
 Remove only the files you intend to reset. Deleting `browser-profile/` requires
 logging into Substack again. Deleting `substack.db` removes cached articles and
 summary state.
-

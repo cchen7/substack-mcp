@@ -5,9 +5,8 @@ Use this flow from Copilot or any MCP client.
 ## First-Time Setup
 
 1. Run `substack_login` if `substack_sync_status` reports `loggedIn: false`.
-2. Run `substack_config_set_priority_publications` with:
-   - `https://www.lennysnewsletter.com`
-   - `https://blog.bytebytego.com`
+2. Optionally run `substack_config_set_priority_publications` with the
+   publication URLs you want in the daily summary.
 
 ## Daily Run
 

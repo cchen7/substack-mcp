@@ -51,7 +51,7 @@ Local config is stored at:
 ## Install
 
 ```bash
-cd /Users/chenxin/Local/my-proj-temp/Clawpilot/mcp-substack
+cd ~/path/to/substack-mcp
 npm install
 npx playwright install chromium
 npm run build
@@ -145,7 +145,7 @@ Example MCP client config:
     "substack": {
       "command": "node",
       "args": [
-        "/Users/chenxin/Local/my-proj-temp/Clawpilot/mcp-substack/dist/server.js"
+        "/absolute/path/to/substack-mcp/dist/server.js"
       ]
     }
   }
